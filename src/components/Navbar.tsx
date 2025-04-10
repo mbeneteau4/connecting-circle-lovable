@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
             alt="Connecting Circle Logo" 
             className="h-10 mr-3" 
           />
-          <span className="text-2xl font-semibold text-circle-dark">connecting-circle</span>
+          <span className="text-2xl font-semibold text-circle-text">connecting-circle</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           <div className="mr-4">
             <LanguageSelector />
           </div>
-          <button onClick={toggleMenu} className="text-circle-dark focus:outline-none">
+          <button onClick={toggleMenu} className="text-circle-text focus:outline-none">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
