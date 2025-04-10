@@ -8,25 +8,25 @@
 @layer base {
   :root {
     --background: 0 20% 98%;
-    --foreground: 0 0% 27%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 27%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 27%;
+    --popover-foreground: 0 0% 0%;
 
     --primary: 351 30% 60%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 351 15% 85%;
-    --secondary-foreground: 0 0% 27%;
+    --secondary-foreground: 0 0% 0%;
 
     --muted: 351 10% 85%;
-    --muted-foreground: 0 0% 50%;
+    --muted-foreground: 0 0% 0%;
 
     --accent: 351 15% 88%;
-    --accent-foreground: 0 0% 27%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -58,7 +58,7 @@
   }
 
   .btn-outline {
-    @apply border border-circle text-circle-dark px-6 py-2 rounded-full hover:bg-circle/10 transition-colors duration-300;
+    @apply border border-circle text-black px-6 py-2 rounded-full hover:bg-circle/10 transition-colors duration-300;
   }
   
   .container-custom {

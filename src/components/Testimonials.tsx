@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
     <section className="py-16 bg-circle-light/30">
       <div className="container-custom">
         <motion.h2 
-          className="text-3xl md:text-4xl font-semibold text-gray-800 text-center mb-12"
+          className="text-3xl md:text-4xl font-semibold text-black text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -24,10 +24,10 @@ const Testimonials: React.FC = () => {
                 <Quote size={24} className="text-circle" />
               </div>
             </div>
-            <p className="text-center text-foreground/80 italic mb-4">
+            <p className="text-center text-black italic mb-4">
               "Future testimonial will appear here."
             </p>
-            <p className="text-center font-semibold text-gray-800">Coming Soon</p>
+            <p className="text-center font-semibold text-black">Coming Soon</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -36,10 +36,10 @@ const Testimonials: React.FC = () => {
                 <Quote size={24} className="text-circle" />
               </div>
             </div>
-            <p className="text-center text-foreground/80 italic mb-4">
+            <p className="text-center text-black italic mb-4">
               "Future testimonial will appear here."
             </p>
-            <p className="text-center font-semibold text-gray-800">Coming Soon</p>
+            <p className="text-center font-semibold text-black">Coming Soon</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -48,10 +48,10 @@ const Testimonials: React.FC = () => {
                 <Quote size={24} className="text-circle" />
               </div>
             </div>
-            <p className="text-center text-foreground/80 italic mb-4">
+            <p className="text-center text-black italic mb-4">
               "Future testimonial will appear here."
             </p>
-            <p className="text-center font-semibold text-gray-800">Coming Soon</p>
+            <p className="text-center font-semibold text-black">Coming Soon</p>
           </div>
         </div>
       </div>

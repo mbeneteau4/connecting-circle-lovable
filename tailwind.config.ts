@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -56,7 +57,7 @@ export default {
 					light: '#EFD9D9', // Lighter dusty pink
 					DEFAULT: '#C8898A', // Darker dusty pink
 					dark: '#AC6D6E', // Even darker dusty pink
-					text: '#333333' // Darker grey text
+					text: '#000000' // Black text
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

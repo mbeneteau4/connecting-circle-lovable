@@ -27,21 +27,21 @@ const Navbar: React.FC = () => {
             alt="Connecting Circle Logo" 
             className="h-10 mr-3" 
           />
-          <span className="text-2xl font-semibold text-circle-text">Connecting Circle</span>
+          <span className="text-2xl font-semibold text-black">Connecting Circle</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link to="/" className="text-foreground hover:text-circle transition-colors">
+          <Link to="/" className="text-black hover:text-circle transition-colors">
             {t('nav.home')}
           </Link>
-          <Link to="/about" className="text-foreground hover:text-circle transition-colors">
+          <Link to="/about" className="text-black hover:text-circle transition-colors">
             {t('nav.about')}
           </Link>
-          <Link to="/coaching" className="text-foreground hover:text-circle transition-colors">
+          <Link to="/coaching" className="text-black hover:text-circle transition-colors">
             {t('nav.coaching')}
           </Link>
-          <Link to="/programs" className="text-foreground hover:text-circle transition-colors">
+          <Link to="/programs" className="text-black hover:text-circle transition-colors">
             {t('nav.programs')}
           </Link>
           <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full">
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           <div className="mr-4">
             <LanguageSelector />
           </div>
-          <button onClick={toggleMenu} className="text-circle-text focus:outline-none">
+          <button onClick={toggleMenu} className="text-black focus:outline-none">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -69,28 +69,28 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col space-y-4 p-4">
             <Link 
               to="/" 
-              className="text-foreground hover:text-circle transition-colors py-2"
+              className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
               {t('nav.home')}
             </Link>
             <Link 
               to="/about" 
-              className="text-foreground hover:text-circle transition-colors py-2"
+              className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
               {t('nav.about')}
             </Link>
             <Link 
               to="/coaching" 
-              className="text-foreground hover:text-circle transition-colors py-2"
+              className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
               {t('nav.coaching')}
             </Link>
             <Link 
               to="/programs" 
-              className="text-foreground hover:text-circle transition-colors py-2"
+              className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
               {t('nav.programs')}

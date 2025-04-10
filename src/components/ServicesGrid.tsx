@@ -21,13 +21,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, lin
       transition={{ duration: 0.5, delay: delay * 0.1 + 0.3 }}
     >
       <div className="flex items-center mb-4">
-        <div className="bg-circle-light p-3 rounded-full mr-3 text-gray-700">
+        <div className="bg-circle-light p-3 rounded-full mr-3 text-black">
           {icon}
         </div>
-        <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+        <h3 className="text-xl font-semibold text-black">{title}</h3>
       </div>
       
-      <p className="text-foreground/80 mb-4">{description}</p>
+      <p className="text-black mb-4">{description}</p>
       
       <Link 
         to={link} 
@@ -89,7 +89,7 @@ const ServicesGrid: React.FC = () => {
     <section className="py-16 bg-white">
       <div className="container-custom">
         <motion.h2 
-          className="text-3xl md:text-4xl font-semibold text-gray-800 text-center mb-12"
+          className="text-3xl md:text-4xl font-semibold text-black text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

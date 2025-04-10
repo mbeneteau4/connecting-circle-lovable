@@ -15,18 +15,18 @@ const LanguageSelector: React.FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center focus:outline-none">
-        <Globe size={20} className="text-circle-dark" />
-        <span className="ml-1 text-circle-dark uppercase">{language}</span>
+        <Globe size={20} className="text-black" />
+        <span className="ml-1 text-black uppercase">{language}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="bg-white">
         <DropdownMenuItem 
-          className={`${language === 'en' ? 'bg-accent text-accent-foreground' : ''}`}
+          className={`${language === 'en' ? 'bg-accent text-black' : 'text-black'}`}
           onClick={() => setLanguage('en')}
         >
           English
         </DropdownMenuItem>
         <DropdownMenuItem 
-          className={`${language === 'de' ? 'bg-accent text-accent-foreground' : ''}`}
+          className={`${language === 'de' ? 'bg-accent text-black' : 'text-black'}`}
           onClick={() => setLanguage('de')}
         >
           Deutsch
