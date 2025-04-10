@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				circle: {
-					light: '#F1F0FB', // Light mauve
-					DEFAULT: '#9b87f5', // Mauve
-					dark: '#7E69AB', // Dark mauve
-					text: '#8E9196' // Grey text
+					light: '#F5E7E7', // Light dusty pink
+					DEFAULT: '#D9AAAB', // Dusty pink
+					dark: '#BD898A', // Dark dusty pink
+					text: '#444444' // Dark grey text
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
