@@ -58,8 +58,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <img 
-              src="/lovable-uploads/072921ca-89b7-4971-baaf-47c7144dee22.png" 
-              alt="Colorful watercolor illustration of people standing together in community" 
+              src="/lovable-uploads/5bcc8e2c-cdd5-4c6b-89de-ce9f5f2d9536.png" 
+              alt="People embracing in an authentic relating circle" 
               className="rounded-lg shadow-lg max-w-full md:max-w-md lg:max-w-lg h-auto object-cover"
             />
           </motion.div>
