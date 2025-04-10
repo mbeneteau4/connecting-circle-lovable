@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">connecting-circle</h3>
+            <h3 className="text-xl font-semibold mb-4">Connecting Circle</h3>
             <p className="mb-4 text-white/80">
               Creating spaces for authentic connection, honest communication, and personal growth.
             </p>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/60">
-          <p>&copy; {currentYear} connecting-circle. All rights reserved.</p>
+          <p>&copy; {currentYear} Connecting Circle. All rights reserved.</p>
         </div>
       </div>
     </footer>

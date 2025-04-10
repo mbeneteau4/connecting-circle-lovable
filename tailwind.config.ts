@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,10 +53,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				circle: {
-					light: '#F5E7E7', // Light dusty pink
-					DEFAULT: '#D9AAAB', // Dusty pink
-					dark: '#BD898A', // Dark dusty pink
-					text: '#444444' // Dark grey text
+					light: '#EFD9D9', // Lighter dusty pink
+					DEFAULT: '#C8898A', // Darker dusty pink
+					dark: '#AC6D6E', // Even darker dusty pink
+					text: '#333333' // Darker grey text
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

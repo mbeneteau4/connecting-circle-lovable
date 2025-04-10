@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
             alt="Connecting Circle Logo" 
             className="h-10 mr-3" 
           />
-          <span className="text-2xl font-semibold text-circle-text">connecting-circle</span>
+          <span className="text-2xl font-semibold text-circle-text">Connecting Circle</span>
         </Link>
 
         {/* Desktop Navigation */}
