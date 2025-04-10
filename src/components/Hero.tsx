@@ -58,8 +58,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-              alt="People sitting in a circle in conversation" 
+              src="/lovable-uploads/7492a0b8-1c89-4342-a837-c86b84d34400.png" 
+              alt="People sitting in a circle for mindful conversation" 
               className="rounded-lg shadow-lg max-w-full md:max-w-md lg:max-w-lg h-auto object-cover"
             />
           </motion.div>
