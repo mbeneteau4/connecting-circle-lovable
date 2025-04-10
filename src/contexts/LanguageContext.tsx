@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'en' | 'de';
 
@@ -64,6 +64,41 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
+
+  useEffect(() => {
+    // Try to get the user's country using a geolocation API
+    const detectUserCountry = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        
+        // If the user is from Germany, set language to German
+        if (data.country_code === 'DE') {
+          setLanguage('de');
+        }
+        
+        // Store the detected language in localStorage to avoid repeated API calls
+        localStorage.setItem('preferred_language', language);
+      } catch (error) {
+        console.error('Error detecting user location:', error);
+      }
+    };
+    
+    // Check if we have a saved language preference
+    const savedLanguage = localStorage.getItem('preferred_language') as Language | null;
+    
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'de')) {
+      setLanguage(savedLanguage);
+    } else {
+      // If no saved preference, detect based on location
+      detectUserCountry();
+    }
+  }, []);
+  
+  // Save language preference whenever it changes
+  useEffect(() => {
+    localStorage.setItem('preferred_language', language);
+  }, [language]);
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations[typeof language]] || key;

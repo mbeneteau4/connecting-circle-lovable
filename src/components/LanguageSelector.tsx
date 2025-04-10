@@ -12,6 +12,12 @@ import {
 const LanguageSelector: React.FC = () => {
   const { language, setLanguage } = useLanguage();
 
+  const handleLanguageChange = (lang: 'en' | 'de') => {
+    setLanguage(lang);
+    // Save the user's manual selection
+    localStorage.setItem('preferred_language', lang);
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center focus:outline-none">
@@ -21,13 +27,13 @@ const LanguageSelector: React.FC = () => {
       <DropdownMenuContent align="end" className="bg-white">
         <DropdownMenuItem 
           className={`${language === 'en' ? 'bg-accent text-black' : 'text-black'}`}
-          onClick={() => setLanguage('en')}
+          onClick={() => handleLanguageChange('en')}
         >
           English
         </DropdownMenuItem>
         <DropdownMenuItem 
           className={`${language === 'de' ? 'bg-accent text-black' : 'text-black'}`}
-          onClick={() => setLanguage('de')}
+          onClick={() => handleLanguageChange('de')}
         >
           Deutsch
         </DropdownMenuItem>
