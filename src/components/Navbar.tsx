@@ -22,6 +22,11 @@ const Navbar: React.FC = () => {
     <nav className="bg-white shadow-sm py-4 sticky top-0 z-50">
       <div className="container-custom flex justify-between items-center">
         <Link to="/" className="flex items-center" onClick={closeMenu}>
+          <img 
+            src="/lovable-uploads/9a6f7ebc-d581-4d89-8381-0a69765dfcd3.png" 
+            alt="Connecting Circle Logo" 
+            className="h-10 mr-3" 
+          />
           <span className="text-2xl font-semibold text-circle-dark">connecting-circle</span>
         </Link>
 
