@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -23,26 +26,32 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 items-center">
           <Link to="/" className="text-foreground hover:text-circle transition-colors">
-            Home
+            {t('nav.home')}
           </Link>
           <Link to="/about" className="text-foreground hover:text-circle transition-colors">
-            About
+            {t('nav.about')}
           </Link>
           <Link to="/coaching" className="text-foreground hover:text-circle transition-colors">
-            Coaching
+            {t('nav.coaching')}
           </Link>
           <Link to="/programs" className="text-foreground hover:text-circle transition-colors">
-            Programs
+            {t('nav.programs')}
           </Link>
           <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full">
-            <Link to="/book">Book Your Appointment</Link>
+            <Link to="/book">{t('nav.book')}</Link>
           </Button>
+          <div className="ml-4">
+            <LanguageSelector />
+          </div>
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
+          <div className="mr-4">
+            <LanguageSelector />
+          </div>
           <button onClick={toggleMenu} className="text-circle-dark focus:outline-none">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -58,31 +67,31 @@ const Navbar: React.FC = () => {
               className="text-foreground hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              Home
+              {t('nav.home')}
             </Link>
             <Link 
               to="/about" 
               className="text-foreground hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              About
+              {t('nav.about')}
             </Link>
             <Link 
               to="/coaching" 
               className="text-foreground hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              Coaching
+              {t('nav.coaching')}
             </Link>
             <Link 
               to="/programs" 
               className="text-foreground hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              Programs
+              {t('nav.programs')}
             </Link>
             <Button asChild className="bg-circle hover:bg-circle-dark text-white w-full rounded-full">
-              <Link to="/book" onClick={closeMenu}>Book Your Appointment</Link>
+              <Link to="/book" onClick={closeMenu}>{t('nav.book')}</Link>
             </Button>
           </div>
         </div>
