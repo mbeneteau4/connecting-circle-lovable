@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				circle: {
-					light: '#f8e9f0',
-					DEFAULT: '#d989b5',
-					dark: '#a45a7b',
-					text: '#4a2c39'
+					light: '#E9ECEF',
+					DEFAULT: '#4A90E2',
+					dark: '#2C5282',
+					text: '#2D3748'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

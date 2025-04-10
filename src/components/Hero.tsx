@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-circle-light/50 to-white">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-circle-light/70 to-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div 
