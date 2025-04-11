@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'en' | 'de';
@@ -24,7 +23,7 @@ const translations = {
     "hero.cta": "Start Your Journey",
     "hero.main.title": "Honest communication & authentic encounters",
     "hero.main.description": "connecting-circle – where words touch, people connect, and growth happens",
-    "hero.main.longdesc": "Looking for deep connections, honest conversations, and shared growth? connecting-circle invites you to experience new perspectives in a loving, queer-sensitive space – online & in person, in German & English, with open & closed groups. Here you can develop, learn, feel, play, grow, and be truly in contact.",
+    "hero.main.longdesc": "Looking for deep connections, honest conversations, and shared growth? connecting-circle invites you to experience new perspectives in a loving, queer-sensitive space – online & in person, in German & English, in open & closed groups. Together we can develop, learn, feel, play, grow, and be truly in connection.",
     
     // Services section
     "services.title": "Our Services",
@@ -78,7 +77,7 @@ const translations = {
     "hero.cta": "Starten Sie Ihre Reise",
     "hero.main.title": "Ehrliche Kommunikation & authentische Begegnungen",
     "hero.main.description": "connecting-circle – wo Worte berühren, Menschen sich verbinden und Wachstum geschieht",
-    "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamem Wachstum? connecting-circle lädt dich ein, neue Perspektiven in einem liebevollen, queer-sensiblen Raum zu erleben – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Hier kannst du dich entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Kontakt sein.",
+    "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamem Wachstum? connecting-circle lädt dich ein, neue Perspektiven in einem liebevollen, queer-sensiblen Raum zu erleben – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Zusammen können wir uns entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Verbindung sein.",
     
     // Services section
     "services.title": "Unsere Leistungen",
