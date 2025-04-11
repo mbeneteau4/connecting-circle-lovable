@@ -23,8 +23,8 @@ const translations = {
     "hero.subtitle": "Personalized coaching and mentorship to help you achieve your goals and transform your life",
     "hero.cta": "Start Your Journey",
     "hero.main.title": "Honest communication & authentic encounters",
-    "hero.main.description": "connecting-circle – where words touch, people connect and growth happens",
-    "hero.main.longdesc": "Looking for deep connections, honest conversations, and shared growth? connecting-circle invites you to experience new things in a loving, queer-sensitive space – online & in person, in German & English, with open & closed groups. Here you can develop, learn, feel, play, grow and be truly in contact.",
+    "hero.main.description": "connecting-circle – where words touch, people connect, and growth happens",
+    "hero.main.longdesc": "Looking for deep connections, honest conversations, and shared growth? connecting-circle invites you to experience new perspectives in a loving, queer-sensitive space – online & in person, in German & English, with open & closed groups. Here you can develop, learn, feel, play, grow, and be truly in contact.",
     
     // Services section
     "services.title": "Our Services",
@@ -37,7 +37,7 @@ const translations = {
     "service.authentic.love.desc": "A weekly live, in-person group in Berlin exploring authentic connections in love and intimate relationships.",
     
     "service.authentic.english.title": "Authentic Relating in Community - English",
-    "service.authentic.english.desc": "A 6-week, zoom course of 2 hours weekly. These run every quarter, connecting English speakers worldwide.",
+    "service.authentic.english.desc": "A 6-week zoom course of 2 hours weekly. These run every quarter, connecting English speakers worldwide.",
     
     "service.authentic.german.title": "Authentic Relating in Community - German",
     "service.authentic.german.desc": "The same powerful ARC experience, but delivered entirely in German. Join our 6-week journey of connection.",
@@ -54,7 +54,7 @@ const translations = {
     // Testimonials section
     "testimonials.title": "What Our Clients Say",
     "testimonials.coming.soon": "Coming Soon",
-    "testimonials.placeholder": "Future testimonial will appear here.",
+    "testimonials.placeholder": "Future testimonials will appear here.",
     
     // Footer
     "footer.rights": "All rights reserved",
@@ -78,7 +78,7 @@ const translations = {
     "hero.cta": "Starten Sie Ihre Reise",
     "hero.main.title": "Ehrliche Kommunikation & authentische Begegnungen",
     "hero.main.description": "connecting-circle – wo Worte berühren, Menschen sich verbinden und Wachstum geschieht",
-    "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamen Wachstum? connecting-circle lädt dich ein, neue Erfahrungen in einem liebevollen, queer-sensiblen Raum zu machen – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Hier kannst du dich entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Kontakt sein.",
+    "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamem Wachstum? connecting-circle lädt dich ein, neue Perspektiven in einem liebevollen, queer-sensiblen Raum zu erleben – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Hier kannst du dich entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Kontakt sein.",
     
     // Services section
     "services.title": "Unsere Leistungen",
@@ -90,10 +90,10 @@ const translations = {
     "service.authentic.love.title": "Authentic Relating - Liebe und Sexualität",
     "service.authentic.love.desc": "Eine wöchentliche Live-Gruppe in Berlin, die authentische Verbindungen in der Liebe und in intimen Beziehungen erforscht.",
     
-    "service.authentic.english.title": "Authentic Relating in Gemeinschaft - Englisch",
-    "service.authentic.english.desc": "Ein 6-wöchiger Zoom-Kurs von 2 Stunden wöchentlich. Diese laufen jedes Quartal und verbinden englischsprachige Menschen weltweit.",
+    "service.authentic.english.title": "Authentic Relating in der Gemeinschaft - Englisch",
+    "service.authentic.english.desc": "Ein 6-wöchiger Zoom-Kurs von 2 Stunden wöchentlich. Diese finden vierteljährlich statt und verbinden englischsprachige Menschen weltweit.",
     
-    "service.authentic.german.title": "Authentic Relating in Gemeinschaft - Deutsch",
+    "service.authentic.german.title": "Authentic Relating in der Gemeinschaft - Deutsch",
     "service.authentic.german.desc": "Die gleiche kraftvolle ARC-Erfahrung, aber vollständig auf Deutsch. Nimm teil an unserer 6-wöchigen Verbindungsreise.",
     
     "service.goldies.title": "connecting-circle GOLDies",
@@ -103,7 +103,7 @@ const translations = {
     "service.private.desc": "Einzel- oder Paarberatung, die einen sicheren Raum bietet, um ehrlich die Beziehungen zu dir selbst, deinen Liebsten oder der Welt zu erforschen.",
     
     "service.workshops.title": "Andere Gruppen und Workshops",
-    "service.workshops.desc": "Sophie leitet regelmäßige Gruppen und Workshops in Berlin, darunter Kakao-Zeremonien und Findhorn-Kreistänze & Sacred Dance.",
+    "service.workshops.desc": "Sophie leitet regelmäßige Gruppen und Workshops in Berlin, darunter Kakao-Zeremonien und Findhorn-Kreistänze & Sakraltänze.",
     
     // Testimonials section
     "testimonials.title": "Was unsere Kunden sagen",

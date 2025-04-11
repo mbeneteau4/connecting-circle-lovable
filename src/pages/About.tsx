@@ -30,13 +30,13 @@ const About = () => {
                 transition={{ duration: 0.7 }}
               >
                 <h1 className="text-3xl md:text-4xl font-semibold text-circle-dark mb-6">
-                  Sophie N. Lemperle-McGrath
+                  Sophie N. Lemerle-McGrath
                 </h1>
                 
                 <div className="mb-8">
                   <h2 className="text-xl font-semibold text-circle-dark mb-4">Credentials</h2>
                   <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                    <li>Founder of connecting-circle (live groups in Berlin and global)</li>
+                    <li>Founder of connecting-circle (live groups in Berlin and globally)</li>
                     <li>Gestalt Facilitator</li>
                     <li>Authentic Relating (AR) Facilitator</li>
                     <li>Mediator</li>
@@ -65,7 +65,7 @@ const About = () => {
                   </p>
                   <p className="text-foreground/80">
                     The authentic revolution movement and the circling community inspire me, and authentic relating 
-                    and AR-games are part of my repertoire, and this influence also enriches the connecting-circle and my life.
+                    and AR-games are part of my repertoire. This influence also enriches the connecting-circle and my life.
                   </p>
                 </div>
               </motion.div>
