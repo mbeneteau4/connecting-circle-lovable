@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
@@ -18,14 +19,19 @@ const Index = () => {
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Explore our services and discover how we can help you achieve your goals.
             </p>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button>Get Started</Button>
               <Button 
                 variant="outline" 
-                className="ml-4"
                 asChild
               >
                 <a href="/text-editor">Text Editor Tool</a>
+              </Button>
+              <Button 
+                variant="secondary" 
+                asChild
+              >
+                <a href="/book">Book and Create Content</a>
               </Button>
             </div>
           </div>

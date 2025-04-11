@@ -9,12 +9,14 @@ import { Button } from '@/components/ui/button';
 
 const Book = () => {
   const { t } = useLanguage();
-  const [savedText, setSavedText] = useState<string>('');
+  const [savedText, setSavedText] = useState<string>('Start writing here...');
   const [savedHtml, setSavedHtml] = useState<string>('');
+  const [isEditing, setIsEditing] = useState<boolean>(false);
   const { toast } = useToast();
   
   const handleSaveText = (text: string) => {
     setSavedText(text);
+    setIsEditing(false);
     
     // Convert the text to HTML (reusing the same conversion logic)
     let html = text;
@@ -64,6 +66,10 @@ const Book = () => {
     });
   };
 
+  const handleCancelEdit = () => {
+    setIsEditing(false);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -86,19 +92,29 @@ const Book = () => {
             <div className="bg-background p-8 rounded-lg shadow-sm">
               <h2 className="text-2xl font-semibold mb-6">Write your content</h2>
               
-              <TextEditor 
-                initialValue="Start writing here..."
-                onSave={handleSaveText}
-                isAdmin={false}
-              />
-              
-              {savedText && (
-                <div className="mt-12">
-                  <h3 className="text-xl font-semibold mb-4">Your Saved Content</h3>
-                  <div 
-                    className="p-4 border rounded-md bg-white prose max-w-none"
-                    dangerouslySetInnerHTML={{ __html: savedHtml }}
-                  />
+              {isEditing ? (
+                <TextEditor 
+                  initialValue={savedText}
+                  onSave={handleSaveText}
+                  isAdmin={false}
+                  onCancel={handleCancelEdit}
+                />
+              ) : (
+                <div 
+                  className="cursor-text p-4 border rounded-md bg-white min-h-[200px] relative"
+                  onClick={() => setIsEditing(true)}
+                >
+                  {savedHtml ? (
+                    <div 
+                      className="prose max-w-none" 
+                      dangerouslySetInnerHTML={{ __html: savedHtml }}
+                    />
+                  ) : (
+                    <div className="text-muted-foreground">{savedText}</div>
+                  )}
+                  <div className="absolute top-2 right-2 text-xs text-muted-foreground">
+                    Click to edit
+                  </div>
                 </div>
               )}
             </div>

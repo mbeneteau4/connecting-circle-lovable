@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Bold, Italic, Underline, Copy, Clipboard, Eraser, Undo, Redo, Code, AlignLeft, AlignCenter, AlignRight, Link, List, ListOrdered, Heading1, Heading2, Heading3 } from 'lucide-react';
 import { Textarea } from './ui/textarea';
@@ -22,6 +21,7 @@ interface TextEditorProps {
   initialValue?: string;
   placeholder?: string;
   onSave?: (value: string) => void;
+  onCancel?: () => void;
   className?: string;
   isAdmin?: boolean;
 }
@@ -30,12 +30,13 @@ const TextEditor: React.FC<TextEditorProps> = ({
   initialValue = '',
   placeholder = 'Start typing...',
   onSave,
+  onCancel,
   className,
   isAdmin = false,
 }) => {
   const [text, setText] = useState(initialValue);
   const [htmlOutput, setHtmlOutput] = useState('');
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(true);
   const [selection, setSelection] = useState<{ start: number; end: number } | null>(null);
   const [previousText, setPreviousText] = useState<string[]>([initialValue]);
   const [currentHistoryIndex, setCurrentHistoryIndex] = useState(0);
@@ -43,45 +44,34 @@ const TextEditor: React.FC<TextEditorProps> = ({
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
-  
-  // Convert markdown-like syntax to HTML
+
   const convertToHtml = (text: string) => {
     if (!text) return '';
     
     let html = text;
     
-    // Convert headings
     html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
     html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
     html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
     
-    // Convert bold
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     
-    // Convert italic
     html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
     
-    // Convert underline
     html = html.replace(/_(.+?)_/g, '<u>$1</u>');
     
-    // Convert links
     html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
     
-    // Convert unordered lists
     html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
     html = html.replace(/(<li>.+<\/li>(\n|$))+/g, '<ul>$&</ul>');
     
-    // Convert ordered lists
     html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
     html = html.replace(/(<li>.+<\/li>(\n|$))+/g, (match) => {
-      // Only convert to ordered list if not already wrapped in <ul>
       return match.includes('<ul>') ? match : '<ol>' + match + '</ol>';
     });
     
-    // Convert paragraphs (any line not already converted)
     const paragraphs = html.split('\n');
     html = paragraphs.map(p => {
-      // Skip if it's already a block element
       if (p.match(/<(h[1-6]|ul|ol|li|div|p|blockquote)/)) return p;
       if (p.trim() === '') return '';
       return `<p>${p}</p>`;
@@ -89,8 +79,7 @@ const TextEditor: React.FC<TextEditorProps> = ({
     
     return html;
   };
-  
-  // Update HTML output when text changes
+
   useEffect(() => {
     setHtmlOutput(convertToHtml(text));
   }, [text]);
@@ -140,7 +129,6 @@ const TextEditor: React.FC<TextEditorProps> = ({
         cursorPosition = selEnd + 2;
         break;
       case 'heading1':
-        // Insert at the beginning of the line
         const lineStartH1 = text.substring(0, selStart).lastIndexOf('\n') + 1;
         const lineTextH1 = text.substring(lineStartH1);
         formattedText = `# ${selectedText || lineTextH1}`;
@@ -177,11 +165,9 @@ const TextEditor: React.FC<TextEditorProps> = ({
         cursorPosition = selStart + 4;
         break;
       case 'list':
-        // Insert at the beginning of the line
         const lineStart = text.substring(0, selStart).lastIndexOf('\n') + 1;
         formattedText = `- ${selectedText || ''}`;
         if (selectedText) {
-          // For multiple lines, add list marker to each line
           if (selectedText.includes('\n')) {
             formattedText = selectedText.split('\n').map(line => `- ${line}`).join('\n');
           }
@@ -192,7 +178,6 @@ const TextEditor: React.FC<TextEditorProps> = ({
         const olLineStart = text.substring(0, selStart).lastIndexOf('\n') + 1;
         formattedText = `1. ${selectedText || ''}`;
         if (selectedText) {
-          // For multiple lines, add numbered list markers
           if (selectedText.includes('\n')) {
             formattedText = selectedText.split('\n').map((line, i) => `${i+1}. ${line}`).join('\n');
           }
@@ -220,7 +205,6 @@ const TextEditor: React.FC<TextEditorProps> = ({
     saveToHistory(newText);
     setText(newText);
     
-    // Set cursor position after the operation
     setTimeout(() => {
       if (textareaRef.current) {
         textareaRef.current.focus();
@@ -231,9 +215,7 @@ const TextEditor: React.FC<TextEditorProps> = ({
   };
 
   const saveToHistory = (newText: string) => {
-    // Trim history if we're not at the end (i.e., if we've used undo)
     const newHistory = previousText.slice(0, currentHistoryIndex + 1);
-    // Add the new text to history and update the index
     setPreviousText([...newHistory, newText]);
     setCurrentHistoryIndex(newHistory.length);
   };
@@ -304,7 +286,6 @@ const TextEditor: React.FC<TextEditorProps> = ({
       saveToHistory(newText);
       setText(newText);
       
-      // Update cursor position after paste
       setTimeout(() => {
         if (textareaRef.current) {
           textareaRef.current.selectionStart = cursorPos + clipboardText.length;
@@ -327,7 +308,7 @@ const TextEditor: React.FC<TextEditorProps> = ({
   };
 
   const handleClear = () => {
-    saveToHistory(text); // save current state before clearing
+    saveToHistory(text);
     setText('');
     toast({
       title: "Text cleared",
@@ -336,9 +317,14 @@ const TextEditor: React.FC<TextEditorProps> = ({
   };
 
   const handleSave = () => {
-    setIsEditing(false);
     if (onSave) {
       onSave(text);
+    }
+  };
+
+  const handleCancel = () => {
+    if (onCancel) {
+      onCancel();
     }
   };
 
@@ -351,31 +337,11 @@ const TextEditor: React.FC<TextEditorProps> = ({
     applyFormatting('link', { text: linkText, url: linkUrl });
   };
 
-  // If not in editing mode and not admin, show the readonly view
-  if (!isEditing && !isAdmin) {
-    return (
-      <div 
-        className={cn("relative p-4 rounded-md border border-input bg-background cursor-text", className)}
-        onClick={() => setIsEditing(true)}
-      >
-        {text ? (
-          <div className="whitespace-pre-wrap">
-            {text.split('\n').map((line, i) => (
-              <React.Fragment key={i}>
-                {i > 0 && <br />}
-                {line || <>&nbsp;</>}
-              </React.Fragment>
-            ))}
-          </div>
-        ) : (
-          <div className="text-muted-foreground">{placeholder}</div>
-        )}
-        <div className="absolute top-2 right-2 text-xs text-muted-foreground">
-          Click to edit
-        </div>
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, []);
 
   return (
     <div className={cn("border border-input rounded-md p-2", className)}>
@@ -509,7 +475,6 @@ const TextEditor: React.FC<TextEditorProps> = ({
               <Link size={16} />
             </Button>
 
-            {/* Admin functions */}
             {isAdmin && (
               <>
                 <div className="h-6 w-px bg-border mx-1"></div>
@@ -590,6 +555,7 @@ const TextEditor: React.FC<TextEditorProps> = ({
             onSelect={handleTextareaSelect}
             placeholder={placeholder}
             className="min-h-[200px] resize-y"
+            autoFocus
           />
         </TabsContent>
         
@@ -623,7 +589,7 @@ const TextEditor: React.FC<TextEditorProps> = ({
       </Tabs>
       
       <div className="flex justify-end mt-2 gap-2">
-        <Button variant="outline" onClick={() => setIsEditing(false)}>
+        <Button variant="outline" onClick={handleCancel}>
           Cancel
         </Button>
         <Button onClick={handleSave}>
@@ -635,4 +601,3 @@ const TextEditor: React.FC<TextEditorProps> = ({
 };
 
 export default TextEditor;
-
