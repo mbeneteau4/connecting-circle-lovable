@@ -16,19 +16,17 @@ const translations = {
     "nav.about": "About",
     "nav.coaching": "Coaching",
     "nav.programs": "Programs",
-    "nav.book": "Book Your Session",
+    "nav.book": "Book Your Appointment",
     
     // Hero section
     "hero.title": "Connecting Minds, Building Futures",
     "hero.subtitle": "Personalized coaching and mentorship to help you achieve your goals and transform your life",
     "hero.cta": "Start Your Journey",
-    "hero.main.title": "Honest Communication & Authentic Encounters",
-    "hero.main.description": "Connecting-circle – where words touch, people connect, and growth happens",
-    "hero.main.longdesc": "Looking for deep connections, honest conversations, and shared growth? Connecting-circle invites you to experience new perspectives in a loving, queer-sensitive space – online & in person, in German & English, with open & closed groups. Here you can develop, learn, feel, play, grow, and be truly in contact.",
+    "hero.main.title": "Honest communication & authentic encounters",
+    "hero.main.description": "connecting-circle – where words touch, people connect, and growth happens",
+    "hero.main.longdesc": "Looking for deep connections, honest conversations, and shared growth? connecting-circle invites you to experience new perspectives in a loving, queer-sensitive space – online & in person, in German & English, with open & closed groups. Here you can develop, learn, feel, play, grow, and be truly in contact.",
     
     // Services section
-    "hero.services.title": "Our Services",
-    "hero.services.subtitle": "Discover how we can help you grow",
     "services.title": "Our Services",
     "services.subtitle": "Discover how we can help you grow",
     "services.offerings": "Our Offerings",
@@ -44,7 +42,7 @@ const translations = {
     "service.authentic.german.title": "Authentic Relating in Community - German",
     "service.authentic.german.desc": "The same powerful ARC experience, but delivered entirely in German. Join our 6-week journey of connection.",
     
-    "service.goldies.title": "Connecting-circle GOLDies",
+    "service.goldies.title": "connecting-circle GOLDies",
     "service.goldies.desc": "An online German closed group meeting weekly via zoom with twice-yearly live weekends, running January-June and September-December.",
     
     "service.private.title": "Private Sessions",
@@ -72,19 +70,17 @@ const translations = {
     "nav.about": "Über uns",
     "nav.coaching": "Coaching",
     "nav.programs": "Programme",
-    "nav.book": "Session buchen",
+    "nav.book": "Termin buchen",
     
     // Hero section
-    "hero.title": "Verbindung von Gedanken, Aufbau von Zukunft",
+    "hero.title": "Verbindung von Köpfen, Aufbau von Zukunft",
     "hero.subtitle": "Personalisiertes Coaching und Mentoring, um Ihnen zu helfen, Ihre Ziele zu erreichen und Ihr Leben zu verändern",
     "hero.cta": "Starten Sie Ihre Reise",
     "hero.main.title": "Ehrliche Kommunikation & authentische Begegnungen",
-    "hero.main.description": "Connecting-circle – wo Worte berühren, Menschen sich verbinden und Wachstum geschieht",
-    "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamem Wachstum? Connecting-circle lädt dich ein, neue Perspektiven in einem liebevollen, queer-sensiblen Raum zu erleben – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Hier kannst du dich entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Kontakt sein.",
+    "hero.main.description": "connecting-circle – wo Worte berühren, Menschen sich verbinden und Wachstum geschieht",
+    "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamem Wachstum? connecting-circle lädt dich ein, neue Perspektiven in einem liebevollen, queer-sensiblen Raum zu erleben – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Hier kannst du dich entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Kontakt sein.",
     
     // Services section
-    "hero.services.title": "Unsere Leistungen",
-    "hero.services.subtitle": "Entdecken Sie, wie wir Ihnen beim Wachsen helfen können",
     "services.title": "Unsere Leistungen",
     "services.subtitle": "Entdecken Sie, wie wir Ihnen beim Wachsen helfen können",
     "services.offerings": "Unsere Angebote",
@@ -94,19 +90,19 @@ const translations = {
     "service.authentic.love.title": "Authentic Relating - Liebe und Sexualität",
     "service.authentic.love.desc": "Eine wöchentliche Live-Gruppe in Berlin, die authentische Verbindungen in der Liebe und in intimen Beziehungen erforscht.",
     
-    "service.authentic.english.title": "Authentic Relating in Community - English",
+    "service.authentic.english.title": "Authentic Relating in der Gemeinschaft - Englisch",
     "service.authentic.english.desc": "Ein 6-wöchiger Zoom-Kurs von 2 Stunden wöchentlich. Diese finden vierteljährlich statt und verbinden englischsprachige Menschen weltweit.",
     
-    "service.authentic.german.title": "Authentic Relating in Community - German",
+    "service.authentic.german.title": "Authentic Relating in der Gemeinschaft - Deutsch",
     "service.authentic.german.desc": "Die gleiche kraftvolle ARC-Erfahrung, aber vollständig auf Deutsch. Nimm teil an unserer 6-wöchigen Verbindungsreise.",
     
-    "service.goldies.title": "Connecting-circle GOLDies",
+    "service.goldies.title": "connecting-circle GOLDies",
     "service.goldies.desc": "Eine geschlossene deutschsprachige Online-Gruppe, die sich wöchentlich über Zoom trifft, mit halbjährlichen Live-Wochenenden von Januar bis Juni und September bis Dezember.",
     
-    "service.private.title": "Private Sessions",
+    "service.private.title": "Einzelsitzungen",
     "service.private.desc": "Einzel- oder Paarberatung, die einen sicheren Raum bietet, um ehrlich die Beziehungen zu dir selbst, deinen Liebsten oder der Welt zu erforschen.",
     
-    "service.workshops.title": "Other Groups and Workshops",
+    "service.workshops.title": "Andere Gruppen und Workshops",
     "service.workshops.desc": "Sophie leitet regelmäßige Gruppen und Workshops in Berlin, darunter Kakao-Zeremonien und Findhorn-Kreistänze & Sakraltänze.",
     
     // Testimonials section
