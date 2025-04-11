@@ -38,6 +38,10 @@
     --radius: 0.5rem;
   }
 
+  html, body {
+    @apply overflow-x-hidden min-h-screen;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Montserrat', sans-serif;
@@ -50,18 +54,34 @@
 
 @layer components {
   .service-card {
-    @apply bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg border border-circle/10;
+    @apply bg-white p-4 md:p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg border border-circle/10;
   }
 
   .btn-primary {
-    @apply bg-circle text-white px-6 py-2 rounded-full hover:bg-circle-dark transition-colors duration-300;
+    @apply bg-circle text-white px-4 md:px-6 py-2 rounded-full hover:bg-circle-dark transition-colors duration-300;
   }
 
   .btn-outline {
-    @apply border border-circle text-black px-6 py-2 rounded-full hover:bg-circle/10 transition-colors duration-300;
+    @apply border border-circle text-black px-4 md:px-6 py-2 rounded-full hover:bg-circle/10 transition-colors duration-300;
   }
   
   .container-custom {
-    @apply container mx-auto px-4 md:px-8 max-w-6xl;
+    @apply container mx-auto px-4 max-w-6xl;
+  }
+}
+
+/* Add responsive utilities */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

@@ -20,18 +20,18 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-sm py-4 sticky top-0 z-50">
-      <div className="container-custom flex justify-between items-center">
-        <Link to="/" className="flex items-center" onClick={closeMenu}>
+      <div className="container-custom flex flex-wrap justify-between items-center">
+        <Link to="/" className="flex items-center flex-shrink-0" onClick={closeMenu}>
           <img 
             src="/lovable-uploads/9a6f7ebc-d581-4d89-8381-0a69765dfcd3.png" 
             alt="Connecting Circle Logo" 
-            className="h-10 mr-3" 
+            className="h-8 sm:h-10 mr-2" 
           />
-          <span className="text-2xl font-semibold text-black">Connecting Circle</span>
+          <span className="text-xl sm:text-2xl font-semibold text-black">Connecting Circle</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8 items-center">
+        <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
           <Link to="/" className="text-black hover:text-circle transition-colors">
             {t('nav.home')}
           </Link>
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full">
             <Link to="/book">{t('nav.book')}</Link>
           </Button>
-          <div className="ml-4">
+          <div className="ml-2 lg:ml-4">
             <LanguageSelector />
           </div>
         </div>

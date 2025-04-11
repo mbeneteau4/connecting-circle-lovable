@@ -24,13 +24,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ titleKey, descriptionKey, ico
       transition={{ duration: 0.5, delay: delay * 0.1 + 0.3 }}
     >
       <div className="flex items-center mb-4">
-        <div className="bg-circle-light p-3 rounded-full mr-3 text-black">
+        <div className="bg-circle-light p-2 sm:p-3 rounded-full mr-2 sm:mr-3 text-black">
           {icon}
         </div>
-        <h3 className="text-xl font-semibold text-black">{t(titleKey)}</h3>
+        <h3 className="text-lg sm:text-xl font-semibold text-black">{t(titleKey)}</h3>
       </div>
       
-      <p className="text-black mb-4">{t(descriptionKey)}</p>
+      <p className="text-sm sm:text-base text-black mb-4">{t(descriptionKey)}</p>
       
       <Link 
         to={link} 
@@ -49,52 +49,52 @@ const ServicesGrid: React.FC = () => {
     {
       titleKey: "service.authentic.love.title",
       descriptionKey: "service.authentic.love.desc",
-      icon: <Heart />,
+      icon: <Heart size={20} />,
       link: "/programs/authentic-relating",
       delay: 1
     },
     {
       titleKey: "service.authentic.english.title",
       descriptionKey: "service.authentic.english.desc",
-      icon: <Video />,
+      icon: <Video size={20} />,
       link: "/programs/arc-english",
       delay: 2
     },
     {
       titleKey: "service.authentic.german.title",
       descriptionKey: "service.authentic.german.desc",
-      icon: <Globe />,
+      icon: <Globe size={20} />,
       link: "/programs/arc-german",
       delay: 3
     },
     {
       titleKey: "service.goldies.title",
       descriptionKey: "service.goldies.desc",
-      icon: <Users />,
+      icon: <Users size={20} />,
       link: "/programs/goldies",
       delay: 4
     },
     {
       titleKey: "service.private.title",
       descriptionKey: "service.private.desc",
-      icon: <UserRound />,
+      icon: <UserRound size={20} />,
       link: "/coaching/private-sessions",
       delay: 5
     },
     {
       titleKey: "service.workshops.title",
       descriptionKey: "service.workshops.desc",
-      icon: <MapPin />,
+      icon: <MapPin size={20} />,
       link: "/programs/workshops",
       delay: 6
     }
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="container-custom">
         <motion.h2 
-          className="text-3xl md:text-4xl font-semibold text-black text-center mb-12"
+          className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -102,7 +102,7 @@ const ServicesGrid: React.FC = () => {
           {t('services.offerings')}
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
