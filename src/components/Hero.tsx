@@ -17,13 +17,21 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.7 }}
           >
             <motion.h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              Honest communication & authentic encounters
+              connecting-circle
             </motion.h1>
+            <motion.h2 
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-black mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              Honest communication & authentic encounters
+            </motion.h2>
           </motion.div>
           
           <motion.div
