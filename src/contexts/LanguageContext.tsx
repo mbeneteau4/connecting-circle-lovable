@@ -94,19 +94,19 @@ const translations = {
     "service.authentic.love.title": "Authentic Relating - Liebe und Sexualität",
     "service.authentic.love.desc": "Eine wöchentliche Live-Gruppe in Berlin, die authentische Verbindungen in der Liebe und in intimen Beziehungen erforscht.",
     
-    "service.authentic.english.title": "Authentic Relating in der Gemeinschaft - Englisch",
+    "service.authentic.english.title": "Authentic Relating in Community - English",
     "service.authentic.english.desc": "Ein 6-wöchiger Zoom-Kurs von 2 Stunden wöchentlich. Diese finden vierteljährlich statt und verbinden englischsprachige Menschen weltweit.",
     
-    "service.authentic.german.title": "Authentic Relating in der Gemeinschaft - Deutsch",
+    "service.authentic.german.title": "Authentic Relating in Community - German",
     "service.authentic.german.desc": "Die gleiche kraftvolle ARC-Erfahrung, aber vollständig auf Deutsch. Nimm teil an unserer 6-wöchigen Verbindungsreise.",
     
     "service.goldies.title": "Connecting-circle GOLDies",
     "service.goldies.desc": "Eine geschlossene deutschsprachige Online-Gruppe, die sich wöchentlich über Zoom trifft, mit halbjährlichen Live-Wochenenden von Januar bis Juni und September bis Dezember.",
     
-    "service.private.title": "Einzelsitzungen",
+    "service.private.title": "Private Sessions",
     "service.private.desc": "Einzel- oder Paarberatung, die einen sicheren Raum bietet, um ehrlich die Beziehungen zu dir selbst, deinen Liebsten oder der Welt zu erforschen.",
     
-    "service.workshops.title": "Andere Gruppen und Workshops",
+    "service.workshops.title": "Other Groups and Workshops",
     "service.workshops.desc": "Sophie leitet regelmäßige Gruppen und Workshops in Berlin, darunter Kakao-Zeremonien und Findhorn-Kreistänze & Sakraltänze.",
     
     // Testimonials section
