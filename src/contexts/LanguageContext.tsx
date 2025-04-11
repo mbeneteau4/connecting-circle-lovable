@@ -22,17 +22,47 @@ const translations = {
     "hero.title": "Connecting Minds, Building Futures",
     "hero.subtitle": "Personalized coaching and mentorship to help you achieve your goals and transform your life",
     "hero.cta": "Start Your Journey",
+    "hero.main.title": "Honest communication & authentic encounters",
+    "hero.main.description": "connecting-circle – where words touch, people connect and growth happens",
+    "hero.main.longdesc": "Looking for deep connections, honest conversations, and shared growth? connecting-circle invites you to experience new things in a loving, queer-sensitive space – online & in person, in German & English, with open & closed groups. Here you can develop, learn, feel, play, grow and be truly in contact.",
     
     // Services section
     "services.title": "Our Services",
     "services.subtitle": "Discover how we can help you grow",
+    "services.offerings": "Our Offerings",
+    "services.readmore": "Read more",
+    
+    // Service cards
+    "service.authentic.love.title": "Authentic Relating - Love and Sex",
+    "service.authentic.love.desc": "A weekly live, in-person group in Berlin exploring authentic connections in love and intimate relationships.",
+    
+    "service.authentic.english.title": "Authentic Relating in Community - English",
+    "service.authentic.english.desc": "A 6-week, zoom course of 2 hours weekly. These run every quarter, connecting English speakers worldwide.",
+    
+    "service.authentic.german.title": "Authentic Relating in Community - German",
+    "service.authentic.german.desc": "The same powerful ARC experience, but delivered entirely in German. Join our 6-week journey of connection.",
+    
+    "service.goldies.title": "connecting-circle GOLDies",
+    "service.goldies.desc": "An online German closed group meeting weekly via zoom with twice-yearly live weekends, running January-June and September-December.",
+    
+    "service.private.title": "Private Sessions",
+    "service.private.desc": "Individual or couples counseling providing a safe space to honestly explore relationships with yourself, loved ones, or the world.",
+    
+    "service.workshops.title": "Other Groups and Workshops",
+    "service.workshops.desc": "Sophie leads regular groups and workshops in Berlin, including Cacao ceremonies and Findhorn Circle Dances & Sacred Dance.",
     
     // Testimonials section
     "testimonials.title": "What Our Clients Say",
+    "testimonials.coming.soon": "Coming Soon",
+    "testimonials.placeholder": "Future testimonial will appear here.",
     
     // Footer
     "footer.rights": "All rights reserved",
     "footer.contact": "Contact Us",
+    "footer.slogan": "Creating spaces for authentic connection, honest communication, and personal growth.",
+    "footer.made.with.love": "Made with love in Berlin",
+    "footer.navigation": "Navigation",
+    "footer.copyright": "All rights reserved."
   },
   de: {
     // Navigation
@@ -46,17 +76,47 @@ const translations = {
     "hero.title": "Verbindung von Köpfen, Aufbau von Zukunft",
     "hero.subtitle": "Personalisiertes Coaching und Mentoring, um Ihnen zu helfen, Ihre Ziele zu erreichen und Ihr Leben zu verändern",
     "hero.cta": "Starten Sie Ihre Reise",
+    "hero.main.title": "Ehrliche Kommunikation & authentische Begegnungen",
+    "hero.main.description": "connecting-circle – wo Worte berühren, Menschen sich verbinden und Wachstum geschieht",
+    "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamen Wachstum? connecting-circle lädt dich ein, neue Erfahrungen in einem liebevollen, queer-sensiblen Raum zu machen – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Hier kannst du dich entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Kontakt sein.",
     
     // Services section
     "services.title": "Unsere Leistungen",
     "services.subtitle": "Entdecken Sie, wie wir Ihnen beim Wachsen helfen können",
+    "services.offerings": "Unsere Angebote",
+    "services.readmore": "Mehr erfahren",
+    
+    // Service cards
+    "service.authentic.love.title": "Authentic Relating - Liebe und Sexualität",
+    "service.authentic.love.desc": "Eine wöchentliche Live-Gruppe in Berlin, die authentische Verbindungen in der Liebe und in intimen Beziehungen erforscht.",
+    
+    "service.authentic.english.title": "Authentic Relating in Gemeinschaft - Englisch",
+    "service.authentic.english.desc": "Ein 6-wöchiger Zoom-Kurs von 2 Stunden wöchentlich. Diese laufen jedes Quartal und verbinden englischsprachige Menschen weltweit.",
+    
+    "service.authentic.german.title": "Authentic Relating in Gemeinschaft - Deutsch",
+    "service.authentic.german.desc": "Die gleiche kraftvolle ARC-Erfahrung, aber vollständig auf Deutsch. Nimm teil an unserer 6-wöchigen Verbindungsreise.",
+    
+    "service.goldies.title": "connecting-circle GOLDies",
+    "service.goldies.desc": "Eine geschlossene deutschsprachige Online-Gruppe, die sich wöchentlich über Zoom trifft, mit halbjährlichen Live-Wochenenden von Januar bis Juni und September bis Dezember.",
+    
+    "service.private.title": "Einzelsitzungen",
+    "service.private.desc": "Einzel- oder Paarberatung, die einen sicheren Raum bietet, um ehrlich die Beziehungen zu dir selbst, deinen Liebsten oder der Welt zu erforschen.",
+    
+    "service.workshops.title": "Andere Gruppen und Workshops",
+    "service.workshops.desc": "Sophie leitet regelmäßige Gruppen und Workshops in Berlin, darunter Kakao-Zeremonien und Findhorn-Kreistänze & Sacred Dance.",
     
     // Testimonials section
     "testimonials.title": "Was unsere Kunden sagen",
+    "testimonials.coming.soon": "Demnächst verfügbar",
+    "testimonials.placeholder": "Zukünftige Erfahrungsberichte werden hier erscheinen.",
     
     // Footer
     "footer.rights": "Alle Rechte vorbehalten",
     "footer.contact": "Kontaktieren Sie uns",
+    "footer.slogan": "Wir schaffen Räume für authentische Verbindung, ehrliche Kommunikation und persönliches Wachstum.",
+    "footer.made.with.love": "Mit Liebe in Berlin gemacht",
+    "footer.navigation": "Navigation",
+    "footer.copyright": "Alle Rechte vorbehalten."
   }
 };
 

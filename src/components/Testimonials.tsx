@@ -2,8 +2,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Testimonials: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-16 bg-circle-light/30">
       <div className="container-custom">
@@ -13,7 +16,7 @@ const Testimonials: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Testimonials
+          {t('testimonials.title')}
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -25,9 +28,9 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-center text-black italic mb-4">
-              "Future testimonial will appear here."
+              {t('testimonials.placeholder')}
             </p>
-            <p className="text-center font-semibold text-black">Coming Soon</p>
+            <p className="text-center font-semibold text-black">{t('testimonials.coming.soon')}</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -37,9 +40,9 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-center text-black italic mb-4">
-              "Future testimonial will appear here."
+              {t('testimonials.placeholder')}
             </p>
-            <p className="text-center font-semibold text-black">Coming Soon</p>
+            <p className="text-center font-semibold text-black">{t('testimonials.coming.soon')}</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -49,9 +52,9 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-center text-black italic mb-4">
-              "Future testimonial will appear here."
+              {t('testimonials.placeholder')}
             </p>
-            <p className="text-center font-semibold text-black">Coming Soon</p>
+            <p className="text-center font-semibold text-black">{t('testimonials.coming.soon')}</p>
           </div>
         </div>
       </div>
