@@ -31,29 +31,34 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
-          <Link to="/" className="text-black hover:text-circle transition-colors">
-            {t('nav.home')}
-          </Link>
-          <Link to="/about" className="text-black hover:text-circle transition-colors">
-            {t('nav.about')}
-          </Link>
-          <Link to="/coaching" className="text-black hover:text-circle transition-colors">
-            {t('nav.coaching')}
-          </Link>
-          <Link to="/programs" className="text-black hover:text-circle transition-colors">
-            {t('nav.programs')}
-          </Link>
-          <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full">
-            <Link to="/book">{t('nav.book')}</Link>
-          </Button>
-          <div className="ml-2 lg:ml-4">
+        <div className="hidden md:flex items-center">
+          <div className="flex space-x-4 lg:space-x-8 mr-4 lg:mr-6">
+            <Link to="/" className="text-black hover:text-circle transition-colors">
+              {t('nav.home')}
+            </Link>
+            <Link to="/about" className="text-black hover:text-circle transition-colors">
+              {t('nav.about')}
+            </Link>
+            <Link to="/coaching" className="text-black hover:text-circle transition-colors">
+              {t('nav.coaching')}
+            </Link>
+            <Link to="/programs" className="text-black hover:text-circle transition-colors">
+              {t('nav.programs')}
+            </Link>
+          </div>
+          <div className="flex items-center">
+            <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full mr-4">
+              <Link to="/book">{t('nav.book')}</Link>
+            </Button>
             <LanguageSelector />
           </div>
         </div>
 
         {/* Mobile Navigation Toggle */}
         <div className="md:hidden flex items-center">
+          <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full mr-4">
+            <Link to="/book" onClick={closeMenu}>{t('nav.book')}</Link>
+          </Button>
           <div className="mr-4">
             <LanguageSelector />
           </div>
@@ -95,9 +100,6 @@ const Navbar: React.FC = () => {
             >
               {t('nav.programs')}
             </Link>
-            <Button asChild className="bg-circle hover:bg-circle-dark text-white w-full rounded-full">
-              <Link to="/book" onClick={closeMenu}>{t('nav.book')}</Link>
-            </Button>
           </div>
         </div>
       )}
