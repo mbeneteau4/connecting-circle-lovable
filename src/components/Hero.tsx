@@ -9,41 +9,46 @@ const Hero: React.FC = () => {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-circle-light/70 to-white overflow-hidden">
       <div className="container-custom">
-        <div className="flex flex-col items-center text-center mb-8">
-          <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-black mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            connecting-circle
-          </motion.h1>
-          
-          <motion.div
-            className="w-24 h-1 bg-circle mx-auto mb-6"
-            initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-          ></motion.div>
-          
-          <motion.p 
-            className="text-xl sm:text-2xl md:text-3xl text-black mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-          >
-            {t('hero.main.description')}
-          </motion.p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div 
-            className="order-2 md:order-1"
+            className="text-center md:text-left order-2 md:order-1"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Removed the long description text */}
+            <motion.h1 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-4 md:mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              {t('hero.main.title')}
+            </motion.h1>
+            
+            <motion.div
+              className="w-24 h-1 bg-circle mx-auto md:mx-0 mb-4 md:mb-6"
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            ></motion.div>
+            
+            <motion.p 
+              className="text-lg sm:text-xl md:text-2xl text-black mb-4 md:mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+            >
+              {t('hero.main.description')}
+            </motion.p>
+            
+            <motion.p 
+              className="text-sm sm:text-base md:text-lg text-black"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.7 }}
+            >
+              {t('hero.main.longdesc')}
+            </motion.p>
           </motion.div>
           
           <motion.div
