@@ -77,7 +77,7 @@ const translations = {
     "hero.subtitle": "Personalisiertes Coaching und Mentoring, um Ihnen zu helfen, Ihre Ziele zu erreichen und Ihr Leben zu verändern",
     "hero.cta": "Starten Sie Ihre Reise",
     "hero.main.title": "Ehrliche Kommunikation & authentische Begegnungen",
-    "hero.main.description": "connecting-circle – wo Worte berühren, Begegnung verbindet und Wachstum erblühen kann",
+    "hero.main.description": "connecting-circle\n– wo Worte berühren, Begegnung verbindet und Wachstum erblühen kann",
     "hero.main.longdesc": "Suchst du nach tiefen Verbindungen, ehrlichen Gesprächen und gemeinsamem Wachstum? connecting-circle lädt dich ein, neue Perspektiven in einem liebevollen, queer-sensiblen Raum zu erleben – online & persönlich, auf Deutsch & Englisch, in offenen & geschlossenen Gruppen. Zusammen können wir uns entwickeln, lernen, fühlen, spielen, wachsen und wirklich in Verbindung sein.",
     
     // Services section
