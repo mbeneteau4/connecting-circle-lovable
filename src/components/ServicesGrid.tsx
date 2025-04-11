@@ -78,7 +78,7 @@ const ServicesGrid: React.FC = () => {
       titleKey: "service.private.title",
       descriptionKey: "service.private.desc",
       icon: <UserRound size={20} />,
-      link: "/private-sessions",
+      link: "/coaching/private-sessions",
       delay: 5
     },
     {
@@ -93,31 +93,14 @@ const ServicesGrid: React.FC = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="container-custom">
-        <motion.div 
-          className="text-center mb-12"
+        <motion.h2 
+          className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-8">
-            Our offerings
-          </h2>
-          
-          <div className="max-w-3xl mx-auto mb-12">
-            <h3 className="text-xl sm:text-2xl font-medium text-black mb-4">
-              connecting-circle - where words touch, people connect, and growth happens
-            </h3>
-            <p className="text-base md:text-lg text-black mb-4">
-              Looking for deep connections, honest conversations, and shared growth?
-            </p>
-            <p className="text-base md:text-lg text-black mb-4">
-              connecting-circle invites you to experience new perspectives in a loving, queer-sensitive space – online & in person, in German & English, in open & closed groups.
-            </p>
-            <p className="text-base md:text-lg text-black">
-              Together we can develop, learn, feel, play, grow, and be truly in connection.
-            </p>
-          </div>
-        </motion.div>
+          {t('services.offerings')}
+        </motion.h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {services.map((service, index) => (

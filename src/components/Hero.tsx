@@ -17,21 +17,38 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.7 }}
           >
             <motion.h1 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-4 md:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              connecting-circle
+              {t('hero.main.title')}
             </motion.h1>
-            <motion.h2 
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-black mb-6"
+            
+            <motion.div
+              className="w-24 h-1 bg-circle mx-auto md:mx-0 mb-4 md:mb-6"
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            ></motion.div>
+            
+            <motion.p 
+              className="text-lg sm:text-xl md:text-2xl text-black mb-4 md:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
             >
-              Honest communication & authentic encounters
-            </motion.h2>
+              {t('hero.main.description')}
+            </motion.p>
+            
+            <motion.p 
+              className="text-sm sm:text-base md:text-lg text-black"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.7 }}
+            >
+              {t('hero.main.longdesc')}
+            </motion.p>
           </motion.div>
           
           <motion.div
