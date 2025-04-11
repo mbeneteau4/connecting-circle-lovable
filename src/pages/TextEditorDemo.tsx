@@ -4,9 +4,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TextEditor from '@/components/TextEditor';
 import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
 
 const TextEditorDemo = () => {
   const [savedText, setSavedText] = useState<string>('');
+  const [isAdmin, setIsAdmin] = useState<boolean>(true); // Default to admin mode for the demo
   const { toast } = useToast();
   
   const handleSaveText = (text: string) => {
@@ -14,6 +16,16 @@ const TextEditorDemo = () => {
     toast({
       title: "Text saved",
       description: "Your text has been saved successfully",
+    });
+  };
+
+  const toggleAdminMode = () => {
+    setIsAdmin(!isAdmin);
+    toast({
+      title: isAdmin ? "Admin mode disabled" : "Admin mode enabled",
+      description: isAdmin 
+        ? "Advanced editing features are now hidden" 
+        : "You now have access to advanced editing features",
     });
   };
 
@@ -28,7 +40,7 @@ const TextEditorDemo = () => {
             </h1>
             <div className="w-24 h-1 bg-circle mx-auto mb-6"></div>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Edit text with simple formatting options.
+              Edit text with advanced formatting options.
             </p>
           </div>
         </section>
@@ -36,10 +48,20 @@ const TextEditorDemo = () => {
         <section className="py-16 bg-white">
           <div className="container-custom max-w-3xl">
             <div className="bg-background p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-semibold mb-6">Edit your text</h2>
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-semibold">Edit your text</h2>
+                <Button 
+                  variant={isAdmin ? "default" : "outline"} 
+                  onClick={toggleAdminMode}
+                >
+                  {isAdmin ? "Disable Admin Mode" : "Enable Admin Mode"}
+                </Button>
+              </div>
+              
               <TextEditor 
-                initialValue="Here is some sample text that you can edit.\n\nTry selecting text and using markdown formatting:\n- **bold text** (between ** symbols)\n- *italic text* (between * symbols)\n- _underlined text_ (between _ symbols)"
+                initialValue="Here is some sample text that you can edit.\n\nTry selecting text and using markdown formatting:\n- **bold text** (between ** symbols)\n- *italic text* (between * symbols)\n- _underlined text_ (between _ symbols)\n\nWith admin mode enabled, you can also copy, paste, erase, undo, and redo."
                 onSave={handleSaveText}
+                isAdmin={isAdmin}
               />
               
               {savedText && (
