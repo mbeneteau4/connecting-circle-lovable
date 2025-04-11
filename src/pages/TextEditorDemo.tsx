@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const TextEditorDemo = () => {
   const [savedText, setSavedText] = useState<string>('');
   const [savedHtml, setSavedHtml] = useState<string>('');
-  const [isAdmin, setIsAdmin] = useState<boolean>(true); // Default to admin mode for the demo
+  const [isAdmin, setIsAdmin] = useState<boolean>(false); // Changed default to false (non-admin mode)
   const { toast } = useToast();
   
   const handleSaveText = (text: string) => {
