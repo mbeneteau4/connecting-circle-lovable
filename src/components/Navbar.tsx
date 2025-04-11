@@ -31,8 +31,8 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center">
-          <div className="flex space-x-4 lg:space-x-8 mr-4 lg:mr-6">
+        <div className="hidden md:flex items-center justify-between w-auto">
+          <div className="flex space-x-4 lg:space-x-8 mr-4 lg:mr-8">
             <Link to="/" className="text-black hover:text-circle transition-colors">
               {t('nav.home')}
             </Link>
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
               {t('nav.programs')}
             </Link>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center ml-auto">
             <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full mr-4">
               <Link to="/book">{t('nav.book')}</Link>
             </Button>
@@ -59,10 +59,8 @@ const Navbar: React.FC = () => {
           <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full mr-4">
             <Link to="/book" onClick={closeMenu}>{t('nav.book')}</Link>
           </Button>
-          <div className="mr-4">
-            <LanguageSelector />
-          </div>
-          <button onClick={toggleMenu} className="text-black focus:outline-none">
+          <LanguageSelector />
+          <button onClick={toggleMenu} className="text-black focus:outline-none ml-4">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
