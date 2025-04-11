@@ -2,8 +2,11 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Book = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -11,7 +14,7 @@ const Book = () => {
         <section className="py-16 md:py-24 bg-gradient-to-b from-circle-light/50 to-white">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-semibold text-circle-dark mb-6">
-              Book Your Appointment
+              {t('nav.book')}
             </h1>
             <div className="w-24 h-1 bg-circle mx-auto mb-6"></div>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">

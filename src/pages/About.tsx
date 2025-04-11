@@ -3,8 +3,11 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -36,7 +39,7 @@ const About = () => {
                 <div className="mb-8">
                   <h2 className="text-xl font-semibold text-circle-dark mb-4">Credentials</h2>
                   <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                    <li>Founder of connecting-circle (live groups in Berlin and globally)</li>
+                    <li>Founder of Connecting-circle (live groups in Berlin and globally)</li>
                     <li>Gestalt Facilitator</li>
                     <li>Authentic Relating (AR) Facilitator</li>
                     <li>Mediator</li>
@@ -65,7 +68,7 @@ const About = () => {
                   </p>
                   <p className="text-foreground/80">
                     The authentic revolution movement and the circling community inspire me, and authentic relating 
-                    and AR-games are part of my repertoire. This influence also enriches the connecting-circle and my life.
+                    and AR-games are part of my repertoire. This influence also enriches the Connecting-circle and my life.
                   </p>
                 </div>
               </motion.div>
