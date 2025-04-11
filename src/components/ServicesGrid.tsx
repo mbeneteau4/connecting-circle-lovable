@@ -93,6 +93,16 @@ const ServicesGrid: React.FC = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="container-custom">
+        {/* Added long description text before the offerings title */}
+        <motion.p 
+          className="text-lg text-center max-w-4xl mx-auto mb-12 text-black"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {t('hero.main.longdesc')}
+        </motion.p>
+        
         <motion.h2 
           className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
