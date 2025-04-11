@@ -37,8 +37,8 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              dangerouslySetInnerHTML={{ __html: t('hero.main.description').replace('\n', '<br/>') }}
             >
+              {t('hero.main.description')}
             </motion.p>
             
             <motion.p 
