@@ -11,6 +11,7 @@ import Coaching from "./pages/Coaching";
 import Programs from "./pages/Programs";
 import Book from "./pages/Book";
 import NotFound from "./pages/NotFound";
+import TextEditorDemo from "./pages/TextEditorDemo";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/coaching" element={<Coaching />} />
             <Route path="/programs" element={<Programs />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/text-editor" element={<TextEditorDemo />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
