@@ -40,51 +40,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, lin
 };
 
 const ServicesGrid: React.FC = () => {
-  const services = [
-    {
-      title: "Authentic Relating Circles",
-      description: "Experience deep connection through structured exercises in a safe container.",
-      icon: <Heart size={20} />,
-      link: "/programs/authentic-relating",
-      delay: 1
-    },
-    {
-      title: "Online ARCs in English",
-      description: "Join our virtual circles and connect with people from around the world.",
-      icon: <Video size={20} />,
-      link: "/programs/arc-english",
-      delay: 2
-    },
-    {
-      title: "ARCs in German",
-      description: "Experience authentic relating in German language for local participants.",
-      icon: <Globe size={20} />,
-      link: "/programs/arc-german",
-      delay: 3
-    },
-    {
-      title: "The Goldies Circle",
-      description: "A special group for seniors to connect and share wisdom across generations.",
-      icon: <Users size={20} />,
-      link: "/programs/goldies",
-      delay: 4
-    },
-    {
-      title: "Private Sessions",
-      description: "One-on-one coaching for deeper personal work and individual growth.",
-      icon: <UserRound size={20} />,
-      link: "/coaching/private-sessions",
-      delay: 5
-    },
-    {
-      title: "Workshops & Events",
-      description: "Special in-person events focused on specific relationship topics.",
-      icon: <MapPin size={20} />,
-      link: "/programs/workshops",
-      delay: 6
-    }
-  ];
-
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="container-custom">
@@ -98,16 +53,48 @@ const ServicesGrid: React.FC = () => {
         </motion.h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {services.map((service, index) => (
-            <ServiceCard 
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              link={service.link}
-              delay={service.delay}
-            />
-          ))}
+          <ServiceCard 
+            title="Authentic Relating Circles"
+            description="Experience deep connection through structured exercises in a safe container."
+            icon={<Heart size={20} />}
+            link="/programs/authentic-relating"
+            delay={1}
+          />
+          <ServiceCard 
+            title="Online ARCs in English"
+            description="Join our virtual circles and connect with people from around the world."
+            icon={<Video size={20} />}
+            link="/programs/arc-english"
+            delay={2}
+          />
+          <ServiceCard 
+            title="ARCs in German"
+            description="Experience authentic relating in German language for local participants."
+            icon={<Globe size={20} />}
+            link="/programs/arc-german"
+            delay={3}
+          />
+          <ServiceCard 
+            title="The Goldies Circle"
+            description="A special group for seniors to connect and share wisdom across generations."
+            icon={<Users size={20} />}
+            link="/programs/goldies"
+            delay={4}
+          />
+          <ServiceCard 
+            title="Private Sessions"
+            description="One-on-one coaching for deeper personal work and individual growth."
+            icon={<UserRound size={20} />}
+            link="/coaching/private-sessions"
+            delay={5}
+          />
+          <ServiceCard 
+            title="Workshops & Events"
+            description="Special in-person events focused on specific relationship topics."
+            icon={<MapPin size={20} />}
+            link="/programs/workshops"
+            delay={6}
+          />
         </div>
       </div>
     </section>
