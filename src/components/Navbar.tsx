@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import LanguageSelector from './LanguageSelector';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,10 +46,9 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           <div className="flex items-center justify-end">
-            <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full mr-4">
+            <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full">
               <Link to="/book">{t('nav.book')}</Link>
             </Button>
-            <LanguageSelector />
           </div>
         </div>
 
@@ -59,8 +57,7 @@ const Navbar: React.FC = () => {
           <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full mr-4">
             <Link to="/book" onClick={closeMenu}>{t('nav.book')}</Link>
           </Button>
-          <LanguageSelector />
-          <button onClick={toggleMenu} className="text-black focus:outline-none ml-4">
+          <button onClick={toggleMenu} className="text-black focus:outline-none">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

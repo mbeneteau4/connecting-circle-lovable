@@ -5,13 +5,10 @@ import ServicesGrid from '@/components/ServicesGrid';
 import Testimonials from '@/components/Testimonials';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
-  const { language } = useLanguage();
-
   return (
-    <div className="min-h-screen flex flex-col" key={`index-page-${language}`}>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
         <Hero />
