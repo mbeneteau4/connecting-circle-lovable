@@ -1,11 +1,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero: React.FC = () => {
-  const { t } = useLanguage();
-  
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-circle-light/70 to-white overflow-hidden">
       <div className="container-custom">
@@ -22,7 +19,7 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              {t('hero.main.title')}
+              Honest communication & authentic encounters
             </motion.h1>
             
             <motion.div
@@ -38,7 +35,7 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
             >
-              {t('hero.main.description')}
+              connecting-circle – where words touch, people connect, and growth happens
             </motion.p>
             
             <motion.p 
@@ -47,7 +44,7 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.7 }}
             >
-              {t('hero.main.longdesc')}
+              Looking for deep connections, honest conversations, and shared growth? connecting-circle invites you to experience new perspectives in a loving, queer-sensitive space – online & in person, in German & English, in open & closed groups. Together we can develop, learn, feel, play, grow, and be truly in connection.
             </motion.p>
           </motion.div>
           
