@@ -3,11 +3,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,21 +31,21 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center justify-between w-full">
           <div className="flex space-x-4 lg:space-x-8">
             <Link to="/" className="text-black hover:text-circle transition-colors">
-              {t('nav.home')}
+              Home
             </Link>
             <Link to="/about" className="text-black hover:text-circle transition-colors">
-              {t('nav.about')}
+              About
             </Link>
             <Link to="/coaching" className="text-black hover:text-circle transition-colors">
-              {t('nav.coaching')}
+              Coaching
             </Link>
             <Link to="/programs" className="text-black hover:text-circle transition-colors">
-              {t('nav.programs')}
+              Programs
             </Link>
           </div>
           <div className="flex items-center justify-end">
             <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full">
-              <Link to="/book">{t('nav.book')}</Link>
+              <Link to="/book">Book Now</Link>
             </Button>
           </div>
         </div>
@@ -55,7 +53,7 @@ const Navbar: React.FC = () => {
         {/* Mobile Navigation Toggle */}
         <div className="md:hidden flex items-center ml-auto">
           <Button asChild className="bg-circle hover:bg-circle-dark text-white rounded-full mr-4">
-            <Link to="/book" onClick={closeMenu}>{t('nav.book')}</Link>
+            <Link to="/book" onClick={closeMenu}>Book Now</Link>
           </Button>
           <button onClick={toggleMenu} className="text-black focus:outline-none">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -72,28 +70,28 @@ const Navbar: React.FC = () => {
               className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              {t('nav.home')}
+              Home
             </Link>
             <Link 
               to="/about" 
               className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              {t('nav.about')}
+              About
             </Link>
             <Link 
               to="/coaching" 
               className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              {t('nav.coaching')}
+              Coaching
             </Link>
             <Link 
               to="/programs" 
               className="text-black hover:text-circle transition-colors py-2"
               onClick={closeMenu}
             >
-              {t('nav.programs')}
+              Programs
             </Link>
           </div>
         </div>

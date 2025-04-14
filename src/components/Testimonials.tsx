@@ -2,11 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 const Testimonials: React.FC = () => {
-  const { t } = useLanguage();
-  
   return (
     <section className="py-12 md:py-16 bg-circle-light/30">
       <div className="container-custom">
@@ -16,11 +13,10 @@ const Testimonials: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {t('testimonials.title')}
+          What People Are Saying
         </motion.h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {/* This section will be filled with testimonials later */}
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
             <div className="flex justify-center mb-4">
               <div className="bg-circle/10 p-3 rounded-full">
@@ -28,9 +24,9 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-center text-black italic mb-4">
-              {t('testimonials.placeholder')}
+              "Testimonials will be added here soon. We're gathering feedback from our participants."
             </p>
-            <p className="text-center font-semibold text-black">{t('testimonials.coming.soon')}</p>
+            <p className="text-center font-semibold text-black">Coming Soon</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
@@ -40,9 +36,9 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-center text-black italic mb-4">
-              {t('testimonials.placeholder')}
+              "Testimonials will be added here soon. We're gathering feedback from our participants."
             </p>
-            <p className="text-center font-semibold text-black">{t('testimonials.coming.soon')}</p>
+            <p className="text-center font-semibold text-black">Coming Soon</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
@@ -52,9 +48,9 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-center text-black italic mb-4">
-              {t('testimonials.placeholder')}
+              "Testimonials will be added here soon. We're gathering feedback from our participants."
             </p>
-            <p className="text-center font-semibold text-black">{t('testimonials.coming.soon')}</p>
+            <p className="text-center font-semibold text-black">Coming Soon</p>
           </div>
         </div>
       </div>

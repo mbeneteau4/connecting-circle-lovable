@@ -2,11 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const { t } = useLanguage();
   
   return (
     <footer className="bg-gray-800 text-white py-8 md:py-12">
@@ -15,47 +13,47 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg md:text-xl font-semibold mb-4">Connecting Circle</h3>
             <p className="mb-4 text-white/80 text-sm md:text-base">
-              {t('footer.slogan')}
+              Authentic connections in a safe environment
             </p>
             <div className="flex items-center">
               <Heart size={16} className="mr-2 text-circle" />
-              <span className="text-white/80 text-sm">{t('footer.made.with.love')}</span>
+              <span className="text-white/80 text-sm">Made with love in Berlin</span>
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4">{t('footer.navigation')}</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm md:text-base">
               <li>
                 <Link to="/" className="text-white/80 hover:text-white transition-colors">
-                  {t('nav.home')}
+                  Home
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-white/80 hover:text-white transition-colors">
-                  {t('nav.about')}
+                  About
                 </Link>
               </li>
               <li>
                 <Link to="/coaching" className="text-white/80 hover:text-white transition-colors">
-                  {t('nav.coaching')}
+                  Coaching
                 </Link>
               </li>
               <li>
                 <Link to="/programs" className="text-white/80 hover:text-white transition-colors">
-                  {t('nav.programs')}
+                  Programs
                 </Link>
               </li>
               <li>
                 <Link to="/book" className="text-white/80 hover:text-white transition-colors">
-                  {t('nav.book')}
+                  Book Now
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4">{t('footer.contact')}</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4">Contact</h3>
             <p className="text-white/80 mb-2 text-sm md:text-base">
               Sophie Nicole Lemerle McGrath
             </p>
@@ -74,7 +72,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/20 text-center text-white/60 text-xs md:text-sm">
-          <p>&copy; {currentYear} Connecting Circle. {t('footer.copyright')}</p>
+          <p>&copy; {currentYear} Connecting Circle. All rights reserved.</p>
         </div>
       </div>
     </footer>
